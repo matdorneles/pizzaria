@@ -11,6 +11,7 @@ datasource db {
 }
 
 // create migration on cmd: yarn prisma migrate dev
+
 model User {
   id String @id @default(uuid())
   name String
