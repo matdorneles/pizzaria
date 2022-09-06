@@ -20,6 +20,9 @@ export function isAuthenticated(req: Request, res: Response, next: NextFunction)
 
     const { sub } = verify(token, process.env.JWT_SECRET) as Payload;
 
+    // Recover token ID and place user_id in request
+    req.user_id = sub;
+
     return next();
 
   } catch(err) {
