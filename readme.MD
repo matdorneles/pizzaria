@@ -26,8 +26,11 @@ Following you can check how to work with the back-end using our endpoints:
  - USER ROUTES
 
 **POST** `/users` - Create a new user using JSON and sending a `name(string), email(string) and password(string)`.
+
 **LOGIN** `/session` - Login a user using JSON and sending an `email(string) and password(string)`.
+
 **GET** `/me` - Check your user information after login.
+
 
 - CATEGORY ROUTES
 
@@ -35,11 +38,13 @@ Following you can check how to work with the back-end using our endpoints:
 
 **GET** `/category` - Pull all previously registered categories.
 
+
 - PRODUCT ROUTES
 
 **POST** `/product` - Create a new product by sending a Multipart with a `name(string), price(string), description(string), file(image) and a category_id(string)`.
 
 **GET** `/category/product` - Pull a previously registered category and all it's products by sending a `category_id(string)`.
+
 
 - ORDER ROUTES
 
