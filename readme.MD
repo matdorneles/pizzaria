@@ -32,20 +32,29 @@ Following you can check how to work with the back-end using our endpoints:
 - CATEGORY ROUTES
 
 **POST** `/category` - Create a new category with JSON sending a `name(string)`. *This is necessary because you will need it's ID to create products and items,* i.e Pizzas and Drinks.
+
 **GET** `/category` - Pull all previously registered categories.
 
 - PRODUCT ROUTES
 
 **POST** `/product` - Create a new product by sending a Multipart with a `name(string), price(string), description(string), file(image) and a category_id(string)`.
+
 **GET** `/category/product` - Pull a previously registered category and all it's products by sending a `category_id(string)`.
 
 - ORDER ROUTES
 
 **POST** `/order` - Create a new order with JSON sending a `table(int4)`.
-**POST** `/order/item` - Add a new item to an order with JSON sending an `order_id(string), product_id(string), amount(int4)`
+
+**POST** `/order/item` - Add a new item to an order with JSON sending an `order_id(string), product_id(string), amount(int4)`.
+
 **DELETE** `/order/item` - Delete an existing item by informing it's `item_id(string)` via query params.
+
 **DELETE** `/order` - Delete an existing order by informing it's `order_id(string)` via query params.
+
 **PUT** `/order/send` - Send an order to the "kitchen" by informing it's `order_id(string)` via JSON.
+
 **PUT** `/order/finish` - Finish an order by informing it's `order_id(string)` via JSON.
+
 **GET** `/order` - List all send but not finished orders.
+
 **POST** `/order/detail` - Detail an order's items that's been sent by informing it's `order_id(string)` via query params.
