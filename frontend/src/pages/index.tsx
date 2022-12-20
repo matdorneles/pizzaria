@@ -15,8 +15,8 @@ export default function Home() {
 
       <div className={styles.login}>
         <form>
-          <Input placeholder="Digite seu email"/>
-          <Input placeholder="Digite sua senha"/>
+          <Input placeholder="Digite seu email" type="text"/>
+          <Input placeholder="Digite sua senha" type="text"/>
         </form>
       </div>
     </div>
